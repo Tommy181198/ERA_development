@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background: #f2f2f2;
+font-family: Arial;
+}
+
+.container .form-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    height: 60vh;
+    background: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container .form-image{
+    position: absolute;
+    right: 0;
+    color: #fff;
+    height: 100%;
+    width: 60%;
+    background: linear-gradient(rgba(235,0,255,0.9),rgba(17,166,223,0.9)), url('../logo.png');
+    clip-path: polygon(0 0, 100% 0, 100% 100%,70% 100%);
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+
+.container .form-image .text h3{font-size: 18px;}
+.container .form-image .text h2{font-size: 40px;margin-bottom: 20px;}
+.container .form-image .text{
+    position: absolute;
+    right: 0;
+    padding:30px;
+    text-align: right;
+    width: 60%;
+}
+
+.form-group{
+    margin: 30px 60px;
+}
+
+.form-group .input-group{
+    width: 300px;
+    margin: 15px 0px;
+}
+
+.form-body .header{
+    margin: 0px 60px;
+}
+
+.form-group .input-group a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+}
+.form-group .input-group input[type="password"],
+.form-group .input-group input[type="text"]{
+
+    width: 100%;
+    padding: 15px 0px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #ccc;
+}
+
+
+
+.form-group .input-group button{
+    position: relative;
+    background: rgb(235, 0, 255);
+    width: 100px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 200px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.form-group .input-group button::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    border-radius: 5px;
+    background: linear-gradient(to left,rgb(235, 0, 255),rgb(17, 166, 223));
+    left: -100px;
+    top: 0;
+    transition: transform 0.5s;
+}
+
+.form-group .input-group button:hover::before{
+    transform: translateX(100px);
+    z-index: -1;
+}
+
+.form-group .input-group button:active::before{
+    background: #e5e5e5;
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
+}
+
+
+
+
+
+
+.form-group .input-group.flex{
+    display: flex;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+
